@@ -62,15 +62,15 @@ Based on: `prd-mpdee-support-website.md`
   - [x] 3.6 Create 404 and error pages with MPDEE styling
   - [x] 3.7 Setup proper routing structure for all main pages
 
-- [ ] 4.0 Service Pages and Content Implementation
-  - [ ] 4.1 Create homepage with hero section showcasing all IT support services
-  - [ ] 4.2 Implement services page detailing remote helpdesk, on-site, hardware/software support
-  - [ ] 4.3 Build pricing page with hourly rates (£50/£24), monthly retainers (£120+), and project pricing
-  - [ ] 4.4 Create service category cards with clear descriptions and call-to-actions
-  - [ ] 4.5 Implement extended hours information display (not 24/7 but beyond standard)
-  - [ ] 4.6 Add service benefits and process explanations for credibility
-  - [ ] 4.7 Create testimonials or case study sections (placeholder content initially)
-  - [ ] 4.8 Optimize all content for local IT support SEO terms
+- [x] 4.0 Service Pages and Content Implementation
+  - [x] 4.1 Create homepage with hero section showcasing all IT support services
+  - [x] 4.2 Implement services page detailing remote helpdesk, on-site, hardware/software support
+  - [x] 4.3 Build pricing page with hourly rates (£50/£24), monthly retainers (£120+), and project pricing
+  - [x] 4.4 Create service category cards with clear descriptions and call-to-actions
+  - [x] 4.5 Implement extended hours information display (not 24/7 but beyond standard)
+  - [x] 4.6 Add service benefits and process explanations for credibility
+  - [x] 4.7 Create testimonials or case study sections (placeholder content initially)
+  - [x] 4.8 Optimize all content for local IT support SEO terms
 
 - [ ] 5.0 Contact System and Knowledge Base Features
   - [ ] 5.1 Build contact form component with instant callback request option
