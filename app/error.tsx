@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MPDEELogo } from "@/components/ui/mpdee-logo";
+import Link from "next/link";
 
 export default function Error({
   error,
@@ -48,7 +49,7 @@ export default function Error({
               Try Again
             </Button>
             <Button asChild variant="outline">
-              <a href="/">Go Home</a>
+              <Link href="/">Go Home</Link>
             </Button>
           </div>
           

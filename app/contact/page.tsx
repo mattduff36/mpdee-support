@@ -19,7 +19,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-4xl font-bold mb-6">Get Support</h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Need IT support? We're here to help. Submit a request below and we'll get back to you quickly.
+            Need IT support? We&apos;re here to help. Submit a request below and we&apos;ll get back to you quickly.
           </p>
         </div>
       </section>
@@ -107,7 +107,7 @@ export default function ContactPage() {
                     className="rounded border-input"
                   />
                   <Label htmlFor="callback" className="text-sm font-medium">
-                    Request instant callback (we'll call you within 30 minutes during business hours)
+                    Request instant callback (we&apos;ll call you within 30 minutes during business hours)
                   </Label>
                 </div>
 

@@ -53,7 +53,7 @@ export default function ServicesPage() {
                     <h2 className="text-2xl font-bold mb-4">{service.title}</h2>
                     <p className="text-muted-foreground mb-6">{service.description}</p>
                     
-                    <h3 className="font-semibold mb-3">What's Included:</h3>
+                    <h3 className="font-semibold mb-3">What&apos;s Included:</h3>
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
@@ -100,7 +100,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold mb-6">Extended Support Hours</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            We're here when you need us most, with extended hours beyond standard business times.
+            We&apos;re here when you need us most, with extended hours beyond standard business times.
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">

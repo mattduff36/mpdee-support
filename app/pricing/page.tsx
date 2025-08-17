@@ -159,7 +159,7 @@ export default function PricingPage() {
             </Card>
 
             <Card className="p-6">
-              <h3 className="font-semibold mb-2">What's included in the first hour charge?</h3>
+              <h3 className="font-semibold mb-2">What&apos;s included in the first hour charge?</h3>
               <p className="text-muted-foreground">
                 The first hour includes problem diagnosis, initial troubleshooting, and up to 60 minutes 
                 of active support work. This ensures we can properly assess and address your issue.
@@ -170,7 +170,7 @@ export default function PricingPage() {
               <h3 className="font-semibold mb-2">Can I cancel my monthly retainer?</h3>
               <p className="text-muted-foreground">
                 Yes, our monthly retainers have no long-term commitment. You can cancel at any time 
-                with 30 days' notice. We believe in earning your business every month.
+                with 30 days&apos; notice. We believe in earning your business every month.
               </p>
             </Card>
 

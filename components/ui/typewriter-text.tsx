@@ -22,7 +22,7 @@ export function TypewriterText({
   const [displayText, setDisplayText] = useState("");
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
-  const [isPaused, setIsPaused] = useState(false);
+  const [, setIsPaused] = useState(false);
 
   const currentLine = lines[currentLineIndex];
 

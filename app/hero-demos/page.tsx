@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { MPDEELogo } from "@/components/ui/mpdee-logo";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
 export default function HeroDemosPage() {
   const [currentDemo, setCurrentDemo] = useState(0);
