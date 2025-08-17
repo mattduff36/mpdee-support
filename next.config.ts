@@ -44,7 +44,8 @@ const nextConfig: NextConfig = {
 
   // Experimental features for better performance
   experimental: {
-    optimizeCss: true,
+    // Temporarily disabled optimizeCss due to missing critters dependency on Vercel
+    // optimizeCss: true,
     scrollRestoration: true,
   },
 
