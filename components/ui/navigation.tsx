@@ -18,7 +18,7 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           <div className="flex items-center">
@@ -91,7 +91,7 @@ export function Navigation() {
 
       {/* Mobile Navigation */}
       <div className={cn("md:hidden", isOpen ? "block" : "hidden")}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
+                  <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 bg-white/95">
           {navigationItems.map((item) => (
             <Link
               key={item.name}

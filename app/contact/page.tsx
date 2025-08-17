@@ -25,11 +25,11 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50 backdrop-blur">
         <div className="mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="p-8">
+            <Card className="p-8 bg-slate-900/50 backdrop-blur border-slate-700">
               <h2 className="text-2xl font-bold mb-6">Submit Support Request</h2>
               <form className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -137,7 +137,7 @@ export default function ContactPage() {
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <Card className="p-6">
+              <Card className="p-6 bg-slate-900/50 backdrop-blur border-slate-700">
                 <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -185,7 +185,7 @@ export default function ContactPage() {
                 </div>
               </Card>
 
-              <Card className="p-6">
+              <Card className="p-6 bg-slate-900/50 backdrop-blur border-slate-700">
                 <h3 className="text-xl font-semibold mb-4">Emergency Support</h3>
                 <p className="text-muted-foreground mb-4">
                   For urgent issues outside of business hours, we offer emergency support with a priority response.
@@ -206,7 +206,7 @@ export default function ContactPage() {
                 </div>
               </Card>
 
-              <Card className="p-6">
+              <Card className="p-6 bg-slate-900/50 backdrop-blur border-slate-700">
                 <h3 className="text-xl font-semibold mb-4">What Happens Next?</h3>
                 <div className="space-y-3">
                   <div className="flex items-start">

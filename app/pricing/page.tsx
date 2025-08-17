@@ -24,7 +24,7 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Tiers */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50 backdrop-blur">
         <div className="mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8">
             {PRICING_TIERS.map((tier) => (
@@ -143,7 +143,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50 backdrop-blur">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Pricing FAQ</h2>

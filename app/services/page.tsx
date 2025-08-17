@@ -27,14 +27,14 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50 backdrop-blur">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:gap-12">
             {SUPPORT_SERVICES.map((service, index) => (
-              <Card key={service.id} className="overflow-hidden">
+              <Card key={service.id} className="overflow-hidden bg-slate-900/50 backdrop-blur border-slate-700 hover:shadow-lg hover:shadow-red-500/20 transition-all">
                 <div className={`grid lg:grid-cols-2 gap-8 ${index % 2 === 1 ? 'lg:grid-cols-2' : ''}`}>
                   <div className={`p-8 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="w-16 h-16 bg-support-gradient rounded-lg mb-6 flex items-center justify-center">
+                    <div className="w-16 h-16 support-gradient rounded-lg mb-6 flex items-center justify-center">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         {service.id === 'remote-support' && (
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
