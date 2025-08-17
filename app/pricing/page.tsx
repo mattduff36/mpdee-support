@@ -15,7 +15,7 @@ export default function PricingPage() {
       {/* Hero Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl font-bold mb-6">Simple, Transparent Pricing</h1>
+          <h1 className="text-4xl font-bold mb-6 text-shadow-lg">Simple, Transparent Pricing</h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Choose the support option that works best for your needs. No hidden fees, 
             no long-term contracts required.
@@ -24,7 +24,7 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Tiers */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50 backdrop-blur">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-amber-50">
         <div className="mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8">
             {PRICING_TIERS.map((tier) => (
@@ -38,7 +38,7 @@ export default function PricingPage() {
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-4">{tier.name}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-shadow-lg">{tier.name}</h3>
                   <div className="text-3xl font-bold text-support-red mb-2">{tier.price}</div>
                   <p className="text-muted-foreground">{tier.description}</p>
                 </div>
@@ -70,10 +70,10 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Details */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Pricing Details</h2>
+            <h2 className="text-3xl font-bold mb-4 text-shadow-lg">Pricing Details</h2>
             <p className="text-lg text-muted-foreground">
               Everything you need to know about our pricing structure
             </p>
@@ -143,10 +143,10 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50 backdrop-blur">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-gray-50">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Pricing FAQ</h2>
+            <h2 className="text-3xl font-bold mb-4 text-shadow-lg">Pricing FAQ</h2>
           </div>
 
           <div className="space-y-6">
@@ -186,14 +186,14 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-white to-amber-50">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-shadow-lg">Ready to Get Started?</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Get professional IT support tailored to your needs and budget
           </p>
           <div className="flex gap-4 items-center justify-center flex-col sm:flex-row">
-            <Button asChild className="support-gradient text-white hover:opacity-90" size="lg">
+            <Button asChild className="support-gradient text-white hover:opacity-90 text-shadow-lg" size="lg">
               <Link href="/contact">Request Support</Link>
             </Button>
             <Button asChild variant="outline" size="lg">

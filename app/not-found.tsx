@@ -8,9 +8,9 @@ export default function NotFound() {
       <div className="max-w-md mx-auto text-center">
         <MPDEELogo size="lg" className="mb-6" />
         
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2">404</h1>
-          <h2 className="text-xl font-semibold text-foreground mb-4">Page Not Found</h2>
+        <div className="error-dialog mx-auto max-w-lg mb-8">
+          <h1 className="text-4xl font-bold text-foreground mb-2 text-shadow-lg">404</h1>
+          <h2 className="text-xl font-semibold text-foreground mb-4 text-shadow-lg">Page Not Found</h2>
           <p className="text-muted-foreground">
             Sorry, we couldn&apos;t find the page you&apos;re looking for. The page may have been moved, deleted, or doesn&apos;t exist.
           </p>

@@ -36,7 +36,7 @@ const config: Config = {
         },
         // Support gradient colors
         'support-red': '#dc2626',
-        'support-navy': '#0f172a',
+        'support-blue': '#2563eb', // Vibrant blue for new accent
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -79,8 +79,16 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        'support-gradient': 'linear-gradient(135deg, #dc2626 0%, #0f172a 100%)',
-        'support-gradient-hover': 'linear-gradient(135deg, #b91c1c 0%, #1e293b 100%)',
+        'support-gradient': 'linear-gradient(135deg, #dc2626 0%, #2563eb 100%)',
+        'support-gradient-hover': 'linear-gradient(135deg, #b91c1c 0%, #2563eb 100%)',
+      },
+      textShadow: {
+        lg: '0 2px 8px rgba(37, 99, 235, 0.15), 0 1px 0 #fff',
+      },
+      errorDialog: {
+        DEFAULT: 'linear-gradient(135deg, #fef2f2 0%, #e3eefd 100%)',
+        border: '#2563eb',
+        shadow: '0 4px 32px 0 rgba(37, 99, 235, 0.10), 0 1.5px 0 #fff',
       },
       fontFamily: {
         sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],

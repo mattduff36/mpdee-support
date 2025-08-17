@@ -17,7 +17,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl font-bold mb-6">Get Support</h1>
+          <h1 className="text-4xl font-bold mb-6 text-shadow-lg">Get Support</h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Need IT support? We&apos;re here to help. Submit a request below and we&apos;ll get back to you quickly.
           </p>
@@ -25,12 +25,12 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50 backdrop-blur">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
         <div className="mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="p-8 bg-slate-900/50 backdrop-blur border-slate-700">
-              <h2 className="text-2xl font-bold mb-6">Submit Support Request</h2>
+            <Card className="p-8 bg-white border-blue-100">
+              <h2 className="text-2xl font-bold mb-6 text-shadow-lg">Submit Support Request</h2>
               <form className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                   </Label>
                 </div>
 
-                <Button type="submit" className="w-full support-gradient text-white hover:opacity-90" size="lg">
+                <Button type="submit" className="w-full support-gradient text-white hover:opacity-90 text-shadow-lg" size="lg">
                   Submit Support Request
                 </Button>
 
@@ -137,8 +137,13 @@ export default function ContactPage() {
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <Card className="p-6 bg-slate-900/50 backdrop-blur border-slate-700">
-                <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+              <Card className="p-6 bg-blue-50/80 border-blue-200">
+                <img
+                  src="/support-rep.jpg"
+                  alt="Customer service representative with headset"
+                  className="w-full rounded-lg shadow-md mb-4 object-cover object-center max-h-40"
+                />
+                <h3 className="text-xl font-semibold mb-4 text-shadow-lg">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <svg className="w-5 h-5 text-support-red mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,8 +190,8 @@ export default function ContactPage() {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-slate-900/50 backdrop-blur border-slate-700">
-                <h3 className="text-xl font-semibold mb-4">Emergency Support</h3>
+              <Card className="p-6 bg-blue-50/80 border-blue-200">
+                <h3 className="text-xl font-semibold mb-4 text-shadow-lg">Emergency Support</h3>
                 <p className="text-muted-foreground mb-4">
                   For urgent issues outside of business hours, we offer emergency support with a priority response.
                 </p>
@@ -206,8 +211,8 @@ export default function ContactPage() {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-slate-900/50 backdrop-blur border-slate-700">
-                <h3 className="text-xl font-semibold mb-4">What Happens Next?</h3>
+              <Card className="p-6 bg-blue-50/80 border-blue-200">
+                <h3 className="text-xl font-semibold mb-4 text-shadow-lg">What Happens Next?</h3>
                 <div className="space-y-3">
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-support-gradient text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</div>

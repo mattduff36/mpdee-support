@@ -22,9 +22,9 @@ export default function Error({
       <div className="max-w-md mx-auto text-center">
         <MPDEELogo size="lg" className="mb-6" />
         
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Oops!</h1>
-          <h2 className="text-xl font-semibold text-foreground mb-4">Something went wrong</h2>
+        <div className="error-dialog mx-auto max-w-lg mb-8">
+          <h1 className="text-4xl font-bold text-foreground mb-2 text-shadow-lg">Oops!</h1>
+          <h2 className="text-xl font-semibold text-foreground mb-4 text-shadow-lg">Something went wrong</h2>
           <p className="text-muted-foreground">
             We encountered an unexpected error. Our support team has been notified and is working to resolve the issue.
           </p>

@@ -22,7 +22,7 @@ export function MPDEELogo({
   };
 
   const departmentVariants = {
-    Support: "support",
+    Support: "support", // now red-to-blue
     Development: "primary", 
     Creative: "secondary"
   } as const;

@@ -6,35 +6,39 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section - Error Page Style */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 min-h-[70vh] flex items-center">
-        <div className="mx-auto max-w-xl text-center">
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 min-h-[70vh] flex items-center overflow-hidden">
+        {/* Hero background image with gradient overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero-it-team.jpg"
+            alt="IT support team collaboration"
+            className="w-full h-full object-cover object-center"
+            style={{ filter: 'brightness(0.7)' }}
+          />
+          <div className="absolute inset-0 z-10 bg-white/75" />
+        </div>
+        <div className="mx-auto max-w-xl text-center relative z-30">
           <MPDEELogo size="xl" className="mb-6" />
 
-          <div className="mb-6">
-            <h1 className="text-4xl font-bold text-foreground mb-3">Oops!</h1>
-            <h2 className="text-xl font-semibold text-foreground mb-4">Something went wrong</h2>
-            <p className="text-base text-muted-foreground">
-              You encountered an unexpected error or technical issue. MPDEE Support team can be notified and help resolve the issue.
+          <div className="error-dialog mx-auto max-w-lg mb-8">
+            <h1 className="text-4xl font-bold text-foreground mb-3 text-shadow-lg">Oops!</h1>
+            <h2 className="text-xl font-semibold text-foreground mb-4 text-shadow-lg">Something went wrong?</h2>
+            <p className="text-base text-muted-foreground mb-4">
+              Have you encountered an unexpected error or technical issue? MPDEE Support team can help resolve the issue.
             </p>
-          </div>
-
-          {/* Error Report Form - Realistic Error Styling */}
-          <div className="mb-6">
-            <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-left">
-              <div className="flex items-center mb-3">
-                <svg className="w-4 h-4 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.232 15.5c-.77.833.192 2.5 1.732 2.5z" />
-                </svg>
-                <span className="font-medium text-sm text-red-800">Describe Your Issue</span>
-              </div>
-              <textarea
-                placeholder="Tell us what happened... (e.g., 'My computer won't start', 'Email not working', 'Network connection issues')"
-                className="w-full h-20 p-3 text-sm bg-white border border-red-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                maxLength={500}
-              />
-              <div className="text-xs text-red-600 mt-1">
-                0/500 characters
-              </div>
+            <div className="flex items-center mb-3">
+              <svg className="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.232 15.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+              <span className="font-semibold text-sm text-blue-700">Describe Your Issue</span>
+            </div>
+            <textarea
+              placeholder="Tell us what happened... (e.g., 'My computer won't start', 'Email not working', 'Network connection issues')"
+              className="w-full h-20 p-3 text-sm bg-white border border-red-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+              maxLength={500}
+            />
+            <div className="text-xs text-blue-600 mt-1">
+              0/500 characters
             </div>
           </div>
 
@@ -58,10 +62,10 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Support Services</h2>
+            <h2 className="text-3xl font-bold mb-4 text-shadow-lg">Our Support Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Your trusted partner for comprehensive IT support services. We provide remote helpdesk support,
               on-site technical assistance, and everything in between to keep your technology running smoothly.
@@ -114,14 +118,14 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-white to-amber-50">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-shadow-lg">Ready to Get Started?</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Contact us today for professional IT support tailored to your needs
           </p>
           <div className="flex gap-4 items-center justify-center flex-col sm:flex-row">
-            <Button className="support-gradient hover:opacity-90 text-white" size="lg">
+            <Button className="support-gradient hover:opacity-90 text-white text-shadow-lg" size="lg">
               Request Support
             </Button>
             <Button variant="outline" size="lg" className="border-gray-300 text-gray-700 hover:bg-gray-50">

@@ -30,9 +30,9 @@
 
   /* MPDEE Support Brand Colors */
   --support-red: #dc2626;
-  --support-navy: #0f172a;
+  --support-navy: #2563eb; /* Changed from navy to vibrant blue */
   --mpdee-primary: #dc2626;
-  --mpdee-secondary: #0f172a;
+  --mpdee-secondary: #2563eb; /* Changed from navy to vibrant blue */
   
   /* Complementary Accent Colors */
   --accent-blue: #3b82f6;
@@ -91,7 +91,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #e3eefd 50%, #e0e7ef 100%); /* subtle blue-tinted gradient */
   background-attachment: fixed;
   color: hsl(var(--foreground));
 }
@@ -106,6 +106,20 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Text shadow utility for important headings */
+.text-shadow-lg {
+  text-shadow: 0 2px 8px rgba(37, 99, 235, 0.15), 0 1px 0 #fff;
+}
+
+/* Error dialog style for hero section */
+.error-dialog {
+  background: linear-gradient(135deg, #fef2f2 0%, #e3eefd 100%);
+  border: 2px solid #2563eb;
+  box-shadow: 0 4px 32px 0 rgba(37, 99, 235, 0.10), 0 1.5px 0 #fff;
+  border-radius: 0.75rem;
+  padding: 2rem;
 }
 
 /* Custom Animations for Hero Demos */
