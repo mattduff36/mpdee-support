@@ -1,6 +1,7 @@
 import { MPDEELogo } from "@/components/ui/mpdee-logo";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
         <div className="mx-auto max-w-xl text-center relative z-30">
           <MPDEELogo size="xl" className="mb-6" />
 
-          <div className="error-dialog mx-auto max-w-lg mb-8">
+          <div className="error-dialog mx-auto max-w-2xl mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-3 text-shadow-lg">Oops!</h1>
             <h2 className="text-xl font-semibold text-foreground mb-4 text-shadow-lg">Something went wrong?</h2>
             <p className="text-base text-muted-foreground mb-4">
@@ -32,10 +33,12 @@ export default function Home() {
               </svg>
               <span className="font-semibold text-sm text-blue-700">Describe Your Issue</span>
             </div>
-            <textarea
-              placeholder="Tell us what happened... (e.g., 'My computer won't start', 'Email not working', 'Network connection issues')"
-              className="w-full h-20 p-3 text-sm bg-white border border-red-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-              maxLength={500}
+            <Textarea 
+              id="message" 
+              name="message" 
+              placeholder="This is a fake error message, but you might have seen something similar... Tell us what happened... (e.g., 'My computer won't start', 'Email not working', 'Network connection issues')"
+              className="min-h-[90px]"
+              required
             />
             <div className="text-xs text-blue-600 mt-1">
               0/500 characters

@@ -13,5 +13,8 @@ git commit -m "$Message"
 Write-Host "Pushing to origin/main..."
 git push origin main
 
-Write-Host "`nAll done! Press Enter to close."
-[void][System.Console]::ReadLine()
+Write-Host "All done!"
+
+# Simulate pressing Enter twice for Cursor/terminal automation
+Add-Type -AssemblyName System.Windows.Forms
+[System.Windows.Forms.SendKeys]::SendWait('{ENTER}{ENTER}')
