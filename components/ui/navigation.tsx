@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 // Global function declarations for analytics tracking
