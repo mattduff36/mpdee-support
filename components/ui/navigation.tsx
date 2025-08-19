@@ -31,7 +31,7 @@ export function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
               <Image
-                src="/images/MPDEE-Support-logo.png"
+                src="/Images/MPDEE-Support-logo.png"
                 alt="MPDEE Support Logo"
                 width={120}
                 height={40}
