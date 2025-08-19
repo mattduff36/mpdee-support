@@ -17,10 +17,7 @@ export const trackEvent = (event: {
   }
 };
 
-export const trackServiceReferral = (
-  service: string,
-  source: string = 'hub'
-) => {
+export const trackServiceReferral = (service: string) => {
   trackEvent({
     action: 'service_referral',
     category: 'navigation',
@@ -39,7 +36,7 @@ export const trackServiceReferral = (
   }
 };
 
-export const trackContactFormSubmission = (service: string, source: string) => {
+export const trackContactFormSubmission = (service: string) => {
   trackEvent({
     action: 'contact_form_submit',
     category: 'lead_generation',
@@ -60,7 +57,7 @@ export const trackPageView = (pagePath: string, pageTitle: string) => {
 // Global gtag declaration
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
   }
 }

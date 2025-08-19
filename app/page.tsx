@@ -2,6 +2,7 @@ import { MPDEELogo } from "@/components/ui/mpdee-logo";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,11 +11,13 @@ export default function Home() {
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 min-h-[70vh] flex items-center overflow-hidden">
         {/* Hero background image with gradient overlay */}
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/hero-it-team.jpg"
             alt="IT support team collaboration"
-            className="w-full h-full object-cover object-center"
+            fill
+            className="object-cover object-center"
             style={{ filter: 'brightness(0.7)' }}
+            priority
           />
           <div className="absolute inset-0 z-10 bg-white/75" />
         </div>

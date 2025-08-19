@@ -20,16 +20,6 @@ const navigationItems = [
   { name: "Knowledge Base", href: "/knowledge-base" },
   { name: "Resources", href: "/resources" },
   { name: "Contact", href: "/contact" },
-  { 
-    name: "All MPDEE Services", 
-    href: "https://mpdee.co.uk", 
-    external: true,
-    onClick: () => {
-      if (typeof window !== 'undefined' && window.trackHubReferral) {
-        window.trackHubReferral();
-      }
-    }
-  },
 ];
 
 export function Navigation() {
@@ -48,30 +38,27 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navigationItems.map((item) => (
-              item.external ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={item.onClick}
-                  className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-sm font-medium border border-primary px-3 py-1 rounded-md hover:bg-primary/10"
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-sm font-medium"
-                >
-                  {item.name}
-                </Link>
-              )
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-sm font-medium"
+              >
+                {item.name}
+              </Link>
             ))}
-            <Button className="support-gradient text-white hover:opacity-90" size="sm">
-              Get Support
-            </Button>
+            <a
+              href="https://mpdee.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                if (typeof window !== 'undefined' && window.trackHubReferral) {
+                  window.trackHubReferral();
+                }
+              }}
+              className="support-gradient text-white hover:opacity-90 px-3 py-1.5 rounded-md text-sm font-medium transition-opacity duration-200"
+            >
+              All MPDEE Services
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -122,7 +109,7 @@ export function Navigation() {
 
       {/* Mobile Navigation */}
       <div className={cn("md:hidden", isOpen ? "block" : "hidden")}>
-                  <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 bg-white/95">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 bg-white/95">
           {navigationItems.map((item) => (
             <Link
               key={item.name}
@@ -134,9 +121,20 @@ export function Navigation() {
             </Link>
           ))}
           <div className="px-3 py-2">
-            <Button className="support-gradient text-white hover:opacity-90 w-full" size="sm">
-              Get Support
-            </Button>
+            <a
+              href="https://mpdee.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                setIsOpen(false);
+                if (typeof window !== 'undefined' && window.trackHubReferral) {
+                  window.trackHubReferral();
+                }
+              }}
+              className="support-gradient text-white hover:opacity-90 w-full block px-3 py-1.5 rounded-md text-sm font-medium text-center transition-opacity duration-200"
+            >
+              All MPDEE Services
+            </a>
           </div>
         </div>
       </div>

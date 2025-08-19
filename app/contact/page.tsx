@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { CONTACT_INFO } from "@/lib/constants/services";
 import ContactForm from "@/components/ContactForm";
+import Image from "next/image";
 
 export const metadata = {
   title: "Contact Us - MPDEE Support",
@@ -34,9 +35,11 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               <Card className="p-6 bg-blue-50/80 border-blue-200">
-                <img
+                <Image
                   src="/support-rep.jpg"
                   alt="Customer service representative with headset"
+                  width={400}
+                  height={160}
                   className="w-full rounded-lg shadow-md mb-4 object-cover object-center max-h-40"
                 />
                 <h3 className="text-xl font-semibold mb-4 text-shadow-lg">Contact Information</h3>

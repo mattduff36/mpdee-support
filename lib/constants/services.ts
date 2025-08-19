@@ -111,6 +111,8 @@ export const PRICING_TIERS: PricingTier[] = [
 
 export const CONTACT_INFO = {
   email: "sendme@mpdee.info",
+  phone: "+44 (0) 123 456 7890",
+  emergency: "+44 (0) 123 456 7891",
   responseTime: "Usually within 24 hours",
   supportHours: "Monday-Friday 8AM-6PM, Extended hours available",
   location: "Remote & On-site services available"
