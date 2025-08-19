@@ -6,12 +6,30 @@ import { MPDEELogo } from "./mpdee-logo";
 import { Button } from "./button";
 import { cn } from "@/lib/utils";
 
+// Global function declarations for analytics tracking
+declare global {
+  interface Window {
+    trackConversion?: (action: string) => void;
+    trackHubReferral?: () => void;
+  }
+}
+
 const navigationItems = [
   { name: "Services", href: "/services" },
   { name: "Pricing", href: "/pricing" },
   { name: "Knowledge Base", href: "/knowledge-base" },
   { name: "Resources", href: "/resources" },
   { name: "Contact", href: "/contact" },
+  { 
+    name: "All MPDEE Services", 
+    href: "https://mpdee.co.uk", 
+    external: true,
+    onClick: () => {
+      if (typeof window !== 'undefined' && window.trackHubReferral) {
+        window.trackHubReferral();
+      }
+    }
+  },
 ];
 
 export function Navigation() {
@@ -30,13 +48,26 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navigationItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-sm font-medium"
-              >
-                {item.name}
-              </Link>
+              item.external ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={item.onClick}
+                  className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-sm font-medium border border-primary px-3 py-1 rounded-md hover:bg-primary/10"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
             <Button className="support-gradient text-white hover:opacity-90" size="sm">
               Get Support
