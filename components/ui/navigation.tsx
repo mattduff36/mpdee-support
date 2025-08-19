@@ -29,7 +29,7 @@ export function Navigation() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center space-x-3">
               <Image
                 src="/images/MPDEE-Support-logo.png"
                 alt="MPDEE Support Logo"
@@ -38,6 +38,9 @@ export function Navigation() {
                 className="h-8 w-auto"
                 priority
               />
+              <span className="text-2xl font-bold support-text-gradient">
+                Support
+              </span>
             </Link>
           </div>
 
