@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { MPDEELogo } from "./mpdee-logo";
-import { Button } from "./button";
 import { cn } from "@/lib/utils";
 
 // Global function declarations for analytics tracking
@@ -31,7 +29,14 @@ export function Navigation() {
         <div className="flex h-16 justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <MPDEELogo size="sm" />
+              <Image
+                src="/images/MPDEE-Support-logo.png"
+                alt="MPDEE Support Logo"
+                width={120}
+                height={40}
+                className="h-8 w-auto"
+                priority
+              />
             </Link>
           </div>
 
