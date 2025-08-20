@@ -109,6 +109,11 @@ export default function RootLayout({
         </Script>
         
         <Navigation />
+        <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 text-center">
+          <p className="text-sm text-amber-800">
+            🚧 Website under construction - Some features may be temporarily unavailable
+          </p>
+        </div>
         <main className="flex-1">
           {children}
         </main>
