@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Monitor, ArrowLeft, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/knowledge-base/slow-computer" },
   title: 'How to Fix Slow Computer Performance - Complete Guide | MPDEE Support',
   description: 'Complete guide to fixing slow computer performance. Learn why computers run slowly and get step-by-step solutions to speed up your PC with expert tips from MPDEE Support.',
   keywords: 'slow computer, speed up PC, computer running slow, improve performance, Task Manager, RAM, CPU, malware removal'
@@ -222,12 +223,8 @@ export default function SlowComputerGuide() {
                 professional help. Our experts can diagnose hardware issues and provide advanced solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-shadow-sm">
-                  Get Professional Help
-                </Button>
-                <Button variant="outline" size="lg" className="text-shadow-sm">
-                  Contact Support
-                </Button>
+                <Button size="lg" className="text-shadow-sm" asChild><Link href="/contact">Get Professional Help</Link></Button>
+                <Button variant="outline" size="lg" className="text-shadow-sm" asChild><Link href="/contact">Contact Support</Link></Button>
               </div>
             </div>
           </Card>

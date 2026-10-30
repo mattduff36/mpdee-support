@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Lock, ArrowLeft, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/knowledge-base/forgotten-password" },
   title: 'How to Reset Forgotten Windows Password - Complete Guide | MPDEE Support',
   description: 'Complete guide to resetting forgotten Windows passwords. Learn to recover access to your computer with Microsoft accounts, local accounts, and security questions.',
   keywords: 'forgotten password, Windows password reset, locked out, Microsoft account, local account, password recovery'
@@ -302,12 +303,8 @@ export default function ForgottenPasswordGuide() {
                 professional password recovery services can help unlock your computer safely.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-shadow-sm">
-                  Get Password Recovery Help
-                </Button>
-                <Button variant="outline" size="lg" className="text-shadow-sm">
-                  Emergency Access Service
-                </Button>
+                <Button size="lg" className="text-shadow-sm" asChild><Link href="/contact">Get Password Recovery Help</Link></Button>
+                <Button variant="outline" size="lg" className="text-shadow-sm" asChild><Link href="/contact">Emergency Access Service</Link></Button>
               </div>
             </div>
           </Card>

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Thermometer, ArrowLeft, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/knowledge-base/overheating" },
   title: 'How to Fix Overheating Computer - Complete Cooling Guide | MPDEE Support',
   description: 'Complete guide to fixing computer overheating issues. Learn to clean dust, improve cooling, and prevent thermal shutdowns with expert solutions.',
   keywords: 'computer overheating, thermal shutdown, cooling fans, dust cleaning, CPU temperature, laptop cooling'
@@ -302,12 +303,8 @@ export default function OverheatingGuide() {
                 it may need professional service or hardware replacement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-shadow-sm">
-                  Get Cooling System Service
-                </Button>
-                <Button variant="outline" size="lg" className="text-shadow-sm">
-                  Hardware Upgrade Consultation
-                </Button>
+                <Button size="lg" className="text-shadow-sm" asChild><Link href="/contact">Get Cooling System Service</Link></Button>
+                <Button variant="outline" size="lg" className="text-shadow-sm" asChild><Link href="/contact">Hardware Upgrade Consultation</Link></Button>
               </div>
             </div>
           </Card>

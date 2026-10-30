@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Power, ArrowLeft, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/knowledge-base/computer-wont-turn-on" },
   title: 'Computer Won\'t Turn On - Complete Troubleshooting Guide | MPDEE Support',
   description: 'Complete guide to fixing computers that won\'t turn on. Learn to diagnose power issues, hardware failures, and get your PC working again.',
   keywords: 'computer won\'t turn on, PC not starting, power issues, hardware failure, black screen, no power'
@@ -297,12 +298,8 @@ export default function ComputerWontTurnOnGuide() {
                 it&apos;s likely a hardware failure that requires professional diagnosis and repair.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-shadow-sm">
-                  Get Hardware Diagnosis
-                </Button>
-                <Button variant="outline" size="lg" className="text-shadow-sm">
-                  Emergency Repair Service
-                </Button>
+                <Button size="lg" className="text-shadow-sm" asChild><Link href="/contact">Get Hardware Diagnosis</Link></Button>
+                <Button variant="outline" size="lg" className="text-shadow-sm" asChild><Link href="/contact">Emergency Repair Service</Link></Button>
               </div>
             </div>
           </Card>

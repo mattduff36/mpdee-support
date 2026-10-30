@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Zap, ArrowLeft, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/knowledge-base/frozen-program" },
   title: 'How to Fix Frozen or Unresponsive Programs - Complete Guide | MPDEE Support',
   description: 'Complete guide to fixing frozen and unresponsive programs. Learn to force close crashed applications and prevent software freezing issues.',
   keywords: 'frozen program, not responding, software crash, application freeze, task manager, force close program'
@@ -300,12 +301,8 @@ export default function FrozenProgramGuide() {
                 it might indicate deeper system issues or the need for professional software troubleshooting.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-shadow-sm">
-                  Get Software Support
-                </Button>
-                <Button variant="outline" size="lg" className="text-shadow-sm">
-                  System Diagnosis
-                </Button>
+                <Button size="lg" className="text-shadow-sm" asChild><Link href="/contact">Get Software Support</Link></Button>
+                <Button variant="outline" size="lg" className="text-shadow-sm" asChild><Link href="/contact">System Diagnosis</Link></Button>
               </div>
             </div>
           </Card>

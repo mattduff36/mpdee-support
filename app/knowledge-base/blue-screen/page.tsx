@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { AlertTriangle, ArrowLeft, CheckCircle, Lightbulb, Skull } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/knowledge-base/blue-screen" },
   title: 'How to Fix Blue Screen of Death (BSOD) - Complete Guide | MPDEE Support',
   description: 'Complete guide to fixing Windows Blue Screen of Death errors. Learn causes, solutions, and prevention for BSOD crashes with expert troubleshooting steps.',
   keywords: 'blue screen of death, BSOD, Windows crash, stop code, critical error, system crash, memory management, driver issues'
@@ -303,12 +304,8 @@ export default function BlueScreenGuide() {
                 it&apos;s likely a hardware issue that requires professional diagnosis and repair.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-shadow-sm">
-                  Get Expert Diagnosis
-                </Button>
-                <Button variant="outline" size="lg" className="text-shadow-sm">
-                  Emergency Support
-                </Button>
+                <Button size="lg" className="text-shadow-sm" asChild><Link href="/contact">Get Expert Diagnosis</Link></Button>
+                <Button variant="outline" size="lg" className="text-shadow-sm" asChild><Link href="/contact">Emergency Support</Link></Button>
               </div>
             </div>
           </Card>

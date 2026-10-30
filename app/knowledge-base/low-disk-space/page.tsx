@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Disc, ArrowLeft, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/knowledge-base/low-disk-space" },
   title: 'How to Fix Low Disk Space - Complete Storage Cleanup Guide | MPDEE Support',
   description: 'Complete guide to fixing low disk space warnings. Learn to free up storage, clean temporary files, and optimize your hard drive space.',
   keywords: 'low disk space, disk cleanup, storage full, free up space, hard drive full, disk space warning'
@@ -291,12 +292,8 @@ export default function LowDiskSpaceGuide() {
                 it might be time to upgrade your storage or get professional advice on storage solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-shadow-sm">
-                  Storage Upgrade Consultation
-                </Button>
-                <Button variant="outline" size="lg" className="text-shadow-sm">
-                  Professional Cleanup
-                </Button>
+                <Button size="lg" className="text-shadow-sm" asChild><Link href="/contact">Storage Upgrade Consultation</Link></Button>
+                <Button variant="outline" size="lg" className="text-shadow-sm" asChild><Link href="/contact">Professional Cleanup</Link></Button>
               </div>
             </div>
           </Card>

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Printer, ArrowLeft, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/knowledge-base/printer-problems" },
   title: 'How to Fix Printer Problems - Complete Troubleshooting Guide | MPDEE Support',
   description: 'Complete guide to fixing printer issues including offline status, paper jams, connectivity problems, and print queue issues. Expert printer troubleshooting solutions.',
   keywords: 'printer problems, printer not printing, printer offline, paper jam, print queue, printer troubleshooting, printer drivers'
@@ -256,12 +257,8 @@ export default function PrinterProblemsGuide() {
                 it might be a hardware problem or require professional diagnosis and repair.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-shadow-sm">
-                  Get Printer Support
-                </Button>
-                <Button variant="outline" size="lg" className="text-shadow-sm">
-                  Schedule Service Call
-                </Button>
+                <Button size="lg" className="text-shadow-sm" asChild><Link href="/contact">Get Printer Support</Link></Button>
+                <Button variant="outline" size="lg" className="text-shadow-sm" asChild><Link href="/contact">Schedule Service Call</Link></Button>
               </div>
             </div>
           </Card>

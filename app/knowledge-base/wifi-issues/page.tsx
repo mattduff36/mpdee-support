@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Wifi, ArrowLeft, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/knowledge-base/wifi-issues" },
   title: 'How to Fix WiFi and Internet Connection Issues - Complete Guide | MPDEE Support',
   description: 'Complete guide to fixing WiFi and internet connection problems. Learn to troubleshoot router issues, weak signals, and connectivity problems with expert solutions.',
   keywords: 'WiFi problems, internet connection issues, router troubleshooting, network problems, WiFi not working, internet slow'
@@ -225,12 +226,8 @@ export default function WiFiIssuesGuide() {
                 it might be a hardware issue or require advanced network configuration.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-shadow-sm">
-                  Get Network Support
-                </Button>
-                <Button variant="outline" size="lg" className="text-shadow-sm">
-                  Schedule Diagnosis
-                </Button>
+                <Button size="lg" className="text-shadow-sm" asChild><Link href="/contact">Get Network Support</Link></Button>
+                <Button variant="outline" size="lg" className="text-shadow-sm" asChild><Link href="/contact">Schedule Diagnosis</Link></Button>
               </div>
             </div>
           </Card>

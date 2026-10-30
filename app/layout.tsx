@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import { generateMPDEEMetadata } from "@/src/shared/seo-utils";
 import Script from "next/script";
 import "./globals.css";
@@ -7,14 +7,11 @@ import { Navigation } from "@/components/ui/navigation";
 import { Footer } from "@/components/ui/footer";
 import StructuredData from "@/components/StructuredData";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const manrope = localFont({
+  src: "../public/fonts/Manrope.ttf",
+  variable: "--font-manrope",
+  display: "swap",
+  weight: "200 800",
 });
 
 export const metadata: Metadata = {
@@ -39,18 +36,20 @@ export const metadata: Metadata = {
   }),
   icons: {
     icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
     ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#5bbad5' },
-    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#5bbad5" }],
   },
-  manifest: '/site.webmanifest',
+  manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#f7f6f2",
 };
 
 export default function RootLayout({
@@ -59,14 +58,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={manrope.variable}>
       <head>
         <StructuredData />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
-      >
-        {/* Cross-Domain Google Analytics */}
+      <body className="antialiased min-h-screen flex flex-col">
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-FNQX2LJQQE"
@@ -85,8 +81,7 @@ export default function RootLayout({
                 'custom_parameter_1': 'service_conversion'
               }
             });
-            
-            // Track conversions
+
             function trackConversion(action) {
               gtag('event', 'conversion', {
                 'send_to': 'G-FNQX2LJQQE/' + action,
@@ -94,27 +89,24 @@ export default function RootLayout({
                 'source_site': 'specialized'
               });
             }
-            
-            // Track hub referrals
+
             function trackHubReferral() {
               gtag('event', 'hub_referral', {
                 'service_type': 'support',
                 'destination': 'hub'
               });
             }
-            
+
             window.trackConversion = trackConversion;
             window.trackHubReferral = trackHubReferral;
           `}
         </Script>
-        
+
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
         <Navigation />
-        <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 text-center">
-          <p className="text-sm text-amber-800">
-            🚧 Website under construction - Some features may be temporarily unavailable
-          </p>
-        </div>
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           {children}
         </main>
         <Footer />

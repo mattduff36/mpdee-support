@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { HardDrive, ArrowLeft, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/knowledge-base/data-loss" },
   title: 'How to Recover Lost Data - Complete Data Recovery Guide | MPDEE Support',
   description: 'Complete guide to recovering lost data from deleted files, drive failures, and corruption. Learn data recovery methods and prevention strategies.',
   keywords: 'data recovery, deleted files, hard drive failure, file recovery, backup, data loss prevention'
@@ -320,12 +321,8 @@ export default function DataLossGuide() {
                 professional data recovery services may be your best option for maximum recovery chances.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-shadow-sm">
-                  Emergency Data Recovery
-                </Button>
-                <Button variant="outline" size="lg" className="text-shadow-sm">
-                  Backup Setup Service
-                </Button>
+                <Button size="lg" className="text-shadow-sm" asChild><Link href="/contact">Emergency Data Recovery</Link></Button>
+                <Button variant="outline" size="lg" className="text-shadow-sm" asChild><Link href="/contact">Backup Setup Service</Link></Button>
               </div>
             </div>
           </Card>
